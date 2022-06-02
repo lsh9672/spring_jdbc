@@ -8,5 +8,5 @@
 
 - jdbc를 이용해서 crud를 구현하고 테스트 코드 작성
 
-- `commit` : 
+- `commit` : [d3c1bdb](https://github.com/lsh9672/spring_jdbc/commit/d3c1bdbd3fe92a9cc2a8514ca8941324ffef3fcf)
 
