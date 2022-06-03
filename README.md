@@ -19,4 +19,4 @@
 
 - 커넥션 풀은 스프링 부트가 기본으로 사용하는 HikariCP를 이용함
 
-- `commit` : []()
+- `commit` : [fbe452b](https://github.com/lsh9672/spring_jdbc/commit/fbe452bd2c136d0b380fb62fa26697b2060af51d)
