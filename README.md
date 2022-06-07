@@ -23,6 +23,8 @@
 
 - `commit` : [fbe452b](https://github.com/lsh9672/spring_jdbc/commit/fbe452bd2c136d0b380fb62fa26697b2060af51d)
 
+- `내용정리` : [커넥션 풀과 데이터소스 이해](https://www.notion.so/2-656a84c437d64cc8b0f203f3862bfa6c)
+
 ### (섹션3)
 
 - 트랜잭션과 DB락에 대한 기본개념 이해
