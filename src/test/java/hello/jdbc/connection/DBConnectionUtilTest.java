@@ -14,10 +14,8 @@ public class DBConnectionUtilTest {
     @DisplayName("커넥션 테스트")
     @Test
     public void connectionTest() throws Exception{
-        //give
         Connection connection = DBConnectionUtil.getConnection();
-        //when
-        //then
+
         Assertions.assertThat(connection).isNotNull();
     }
 }
