@@ -11,6 +11,8 @@
 
 - `commit` : [d3c1bdb](https://github.com/lsh9672/spring_jdbc/commit/d3c1bdbd3fe92a9cc2a8514ca8941324ffef3fcf)
 
+- `내용정리` : [JDBC 이해](https://www.notion.so/1-JDBC-d9045f6e40c6429bb9cdf903717cbed4)
+
 ### (섹션2)
 
 - 커넥션을 하는 방법에 대한 이해
