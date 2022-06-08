@@ -34,3 +34,5 @@
 - JDBC를 이용해서 간단한 계좌이체 상황을 만들고, 중간에 예외상황 발생으로 인해 발생하는 문제점을 트랜잭션 롤백을 통해 해결하는 코드를 작성
 
 - `commit` : [9f03dd9](https://github.com/lsh9672/spring_jdbc/commit/9f03dd90f61d6c58ada412af983ad853606f8ab0)
+
+- `내용정리` : [트랜잭션 이해](https://www.notion.so/3-0ffc839c0fbd4b00845fa0db108988da)
