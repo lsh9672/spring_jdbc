@@ -36,3 +36,13 @@
 - `commit` : [9f03dd9](https://github.com/lsh9672/spring_jdbc/commit/9f03dd90f61d6c58ada412af983ad853606f8ab0)
 
 - `내용정리` : [트랜잭션 이해](https://www.notion.so/3-0ffc839c0fbd4b00845fa0db108988da)
+
+### (섹션4 - 2022.06.09)
+
+- 트랜잭션 적용을 위한 코드의 문제점을 확인하고 이를 해결
+
+- 트랜잭션 매니저 -> 트랜잭션 템플릿 -> 트랜잭션 AOP 순으로 적용해보면서 코드를 개선함
+
+- 'commit' :
+
+- '내용정리' :
