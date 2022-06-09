@@ -43,6 +43,6 @@
 
 - 트랜잭션 매니저 -> 트랜잭션 템플릿 -> 트랜잭션 AOP 순으로 적용해보면서 코드를 개선함
 
-- 'commit' :
+- `commit` : [339452e](https://github.com/lsh9672/spring_jdbc/commit/339452e7bd74ee7bfeddc83e2aac78bc987ea7ef)
 
-- '내용정리' :
+- `내용정리` : [스프링과 문제 해결 - 트랜잭션](https://www.notion.so/4-4e958df5231440d2bb922e46a49ac8e8)
