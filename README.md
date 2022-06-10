@@ -55,6 +55,6 @@
 
 - checked exception 사용시 발생하는 의존문제를 unchecked exception을 통해 해결
 
-- `commit` :
+- `commit` : [b7c93e9](https://github.com/lsh9672/spring_jdbc/commit/b7c93e959d54f89c463add8fb61664c290c6ac4a)
 
-- `내용정리` :
+- `내용정리` : [자바 예외 이해](https://www.notion.so/5-c52ad409fece43a3ae143d6927b73cb8)
