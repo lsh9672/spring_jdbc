@@ -46,3 +46,15 @@
 - `commit` : [339452e](https://github.com/lsh9672/spring_jdbc/commit/339452e7bd74ee7bfeddc83e2aac78bc987ea7ef)
 
 - `내용정리` : [스프링과 문제 해결 - 트랜잭션](https://www.notion.so/4-4e958df5231440d2bb922e46a49ac8e8)
+
+### (섹션5 - 2022.06.10)
+
+- 자바에서 사용하는 예외처리의 개념이해
+
+- checked exception 과 unchecked exception에 대해 이해
+
+- checked exception 사용시 발생하는 의존문제를 unchecked exception을 통해 해결
+
+- `commit` :
+
+- `내용정리` :
