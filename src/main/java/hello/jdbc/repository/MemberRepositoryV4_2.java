@@ -1,30 +1,35 @@
 package hello.jdbc.repository;
 
 import hello.jdbc.domain.Member;
+import hello.jdbc.repository.ex.MyDbException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.jdbc.support.JdbcUtils;
+import org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator;
+import org.springframework.jdbc.support.SQLExceptionTranslator;
 
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.NoSuchElementException;
 
 /**
- * 트랜잭션 - 트랜잭션 매니저
- * DataSourceUtils.getConnection()
- * DataSourceUtils.releaseConnection()
+ * SQLExceptionTranslator 추가
  */
 
 @Slf4j
-public class MemberRepositoryV3{
+public class MemberRepositoryV4_2 implements MemberRepository{
 
     private final DataSource dataSource;
+    private final SQLExceptionTranslator exTranslator;
 
-    public MemberRepositoryV3(DataSource dataSource){
+    public MemberRepositoryV4_2(DataSource dataSource){
+
         this.dataSource = dataSource;
+        this.exTranslator = new SQLErrorCodeSQLExceptionTranslator(dataSource);
     }
 
-    public Member save(Member member) throws SQLException {
+    @Override
+    public Member save(Member member){
         /*
         아래와 같이 파라미터 바인딩을 하면 ?부분은 단순한 데이터 취급을 하기 떄문에 , 해당 부분에 쿼리문같은 로직이 들어와서 발생할수 있는
         sql injection문제를 예방할수 있다.
@@ -44,8 +49,7 @@ public class MemberRepositoryV3{
             pstmt.executeUpdate();
             return member;
         } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
+            throw exTranslator.translate("save",sql,e);
         }
         finally {
 
@@ -57,7 +61,8 @@ public class MemberRepositoryV3{
         }
     }
 
-    public Member findById(String memberId) throws SQLException {
+    @Override
+    public Member findById(String memberId) {
         String sql = "select * from member where member_id = ?";
 
         Connection con = null;
@@ -82,16 +87,15 @@ public class MemberRepositoryV3{
             }
         }
         catch (SQLException e){
-            log.error("db error",e);
-            throw e;
+            throw exTranslator.translate("findById",sql,e);
         }
         finally {
             close(con,pstmt,rs);
         }
     }
 
-
-    public void update(String memberId, int money) throws SQLException {
+    @Override
+    public void update(String memberId, int money){
         String sql = "update member set money=? where member_id=?";
 
         Connection con = null;
@@ -107,8 +111,7 @@ public class MemberRepositoryV3{
             int resultSize = pstmt.executeUpdate();
             log.info("resultSize={}", resultSize);
         } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
+            throw exTranslator.translate("update",sql,e);
         }
         finally {
 
@@ -116,8 +119,8 @@ public class MemberRepositoryV3{
         }
     }
 
-
-    public void delete(String memberId) throws SQLException {
+    @Override
+    public void delete(String memberId){
         String sql = "delete from member where member_id=?";
 
         Connection con = null;
@@ -131,8 +134,7 @@ public class MemberRepositoryV3{
             int resultSize = pstmt.executeUpdate();
             log.info("resultSize={}", resultSize);
         } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
+            throw exTranslator.translate("delete",sql,e);
         }
         finally {
 
