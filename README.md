@@ -58,3 +58,13 @@
 - `commit` : [b7c93e9](https://github.com/lsh9672/spring_jdbc/commit/b7c93e959d54f89c463add8fb61664c290c6ac4a)
 
 - `내용정리` : [자바 예외 이해](https://www.notion.so/5-c52ad409fece43a3ae143d6927b73cb8)
+
+### (섹션6 - 2022.07.01)
+
+- 스프링을 이용해서 예외들을 처리함.
+
+- 스프링이 제공하는 템플릿 콜백패턴을 이용해서 중복을 제거함.
+
+- `commit` : [6be16ed](https://github.com/lsh9672/spring_jdbc/commit/6be16eda4f927c604adda15b3834e51cfc0fcbaf)
+
+- `내용정리` : [스프링과 문제해결](https://www.notion.so/6-5ba9f329f88b436c87f805f63fe1c107)
